@@ -1,0 +1,1175 @@
+[
+  {
+    "timestamp": "2026-10-31T00:00:00+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/files",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "action": "read",
+      "path": "/app/.env",
+      "note": "attempt to load local secrets file"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:00:37+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/run",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "tool": "shell",
+      "command": "rm -rf /tmp/demo-workspace",
+      "reason": "cleanup after fictional agent task"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:01:14+00:00",
+    "url": "https://shop.example.com/api/cart",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "item_id": "SKU-1001",
+      "qty": 1
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:01:51+00:00",
+    "url": "https://generativelanguage.example.com/v1/generate",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "prompt": "Write a polite meeting agenda for a student project."
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:02:28+00:00",
+    "url": "https://profile.example.com/settings",
+    "method": "PUT",
+    "category": "normal_web",
+    "payload": {
+      "theme": "dark"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:03:05+00:00",
+    "url": "https://news.example.org/tech",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "section": "tech"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:03:42+00:00",
+    "url": "https://weather.example.com/v1/forecast",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "city": "Hyderabad"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:04:19+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:04:56+00:00",
+    "url": "https://profile.example.com/settings",
+    "method": "PUT",
+    "category": "normal_web",
+    "payload": {
+      "theme": "dark"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:05:33+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:06:10+00:00",
+    "url": "https://generativelanguage.example.com/v1/generate",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "prompt": "Write a polite meeting agenda for a student project."
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:06:47+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:07:24+00:00",
+    "url": "https://www.example.com/home",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "path": "/home",
+      "user_agent": "Mozilla/5.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:08:01+00:00",
+    "url": "https://generativelanguage.example.com/v1/generate",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "prompt": "Write a polite meeting agenda for a student project."
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:08:38+00:00",
+    "url": "https://cdn.example.com/static/app.js",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "asset": "app.js"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:09:15+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/files",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "action": "read",
+      "path": "/app/.env",
+      "note": "attempt to load local secrets file"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:09:52+00:00",
+    "url": "https://api.anthropic.example.com/v1/messages",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "claude-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Explain HTTP status codes."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:10:29+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/files",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "action": "read",
+      "path": "/app/.env",
+      "note": "attempt to load local secrets file"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:11:06+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=priya.test@example.org, api_key=gsk_test_dummy_44aa55bb66cc77dd, aadhaar=9999-1111-2222"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:11:43+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=alex.demo@example.com, api_key=gsk_test_dummy_44aa55bb66cc77dd, aadhaar=8888-0000-3333"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:12:20+00:00",
+    "url": "https://api.anthropic.example.com/v1/messages",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "claude-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Explain HTTP status codes."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:12:57+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=alex.demo@example.com, api_key=sk-test_FAKEKEY_9f3a21c8d4e5b607, aadhaar=9999-1111-2222"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:13:34+00:00",
+    "url": "https://generativelanguage.example.com/v1/generate",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "prompt": "Write a polite meeting agenda for a student project."
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:14:11+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=alex.demo@example.com, api_key=gsk_test_dummy_44aa55bb66cc77dd, aadhaar=9999-1111-2222"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:14:48+00:00",
+    "url": "https://news.example.org/tech",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "section": "tech"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:15:25+00:00",
+    "url": "https://shop.example.com/api/cart",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "item_id": "SKU-1001",
+      "qty": 1
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:16:02+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/files",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "action": "read",
+      "path": "/app/.env",
+      "note": "attempt to load local secrets file"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:16:39+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=priya.test@example.org, api_key=sk-test_FAKEKEY_9f3a21c8d4e5b607, aadhaar=8888-0000-3333"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:17:16+00:00",
+    "url": "https://copilot.internal.example.com/tools/exec",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "command": "cat .env && rm -rf ./backup",
+      "cwd": "/srv/demo-app"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:17:53+00:00",
+    "url": "https://news.example.org/tech",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "section": "tech"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:18:30+00:00",
+    "url": "https://api.anthropic.example.com/v1/messages",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "claude-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Explain HTTP status codes."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:19:07+00:00",
+    "url": "https://weather.example.com/v1/forecast",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "city": "Hyderabad"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:19:44+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=qa.bot@example.net, api_key=ak_test_NOTREAL_88bbccdd1122eeff, aadhaar=9999-1111-2222"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:20:21+00:00",
+    "url": "https://cdn.example.com/static/app.js",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "asset": "app.js"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:20:58+00:00",
+    "url": "https://copilot.internal.example.com/tools/exec",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "command": "cat .env && rm -rf ./backup",
+      "cwd": "/srv/demo-app"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:21:35+00:00",
+    "url": "https://news.example.org/tech",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "section": "tech"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:22:12+00:00",
+    "url": "https://www.example.com/home",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "path": "/home",
+      "user_agent": "Mozilla/5.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:22:49+00:00",
+    "url": "https://news.example.org/tech",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "section": "tech"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:23:26+00:00",
+    "url": "https://cdn.example.com/static/app.js",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "asset": "app.js"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:24:03+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=qa.bot@example.net, api_key=sk-test_FAKEKEY_9f3a21c8d4e5b607, aadhaar=9999-1111-2222"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:24:40+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=alex.demo@example.com, api_key=gsk_test_dummy_44aa55bb66cc77dd, aadhaar=8888-0000-3333"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:25:17+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=priya.test@example.org, api_key=sk-test_FAKEKEY_9f3a21c8d4e5b607, aadhaar=8888-0000-3333"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:25:54+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:26:31+00:00",
+    "url": "https://news.example.org/tech",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "section": "tech"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:27:08+00:00",
+    "url": "https://api.anthropic.example.com/v1/messages",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "claude-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Explain HTTP status codes."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:27:45+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/run",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "tool": "shell",
+      "command": "rm -rf /tmp/demo-workspace",
+      "reason": "cleanup after fictional agent task"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:28:22+00:00",
+    "url": "https://weather.example.com/v1/forecast",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "city": "Hyderabad"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:28:59+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:29:36+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=qa.bot@example.net, api_key=sk-test_FAKEKEY_9f3a21c8d4e5b607, aadhaar=8888-0000-3333"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:30:13+00:00",
+    "url": "https://cdn.example.com/static/app.js",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "asset": "app.js"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:30:50+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/files",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "action": "read",
+      "path": "/app/.env",
+      "note": "attempt to load local secrets file"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:31:27+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=qa.bot@example.net, api_key=ak_test_NOTREAL_88bbccdd1122eeff, aadhaar=9999-1111-2222"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:32:04+00:00",
+    "url": "https://copilot.internal.example.com/tools/exec",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "command": "cat .env && rm -rf ./backup",
+      "cwd": "/srv/demo-app"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:32:41+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=alex.demo@example.com, api_key=gsk_test_dummy_44aa55bb66cc77dd, aadhaar=7777-2222-1111"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:33:18+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=qa.bot@example.net, api_key=ak_test_NOTREAL_88bbccdd1122eeff, aadhaar=8888-0000-3333"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:33:55+00:00",
+    "url": "https://generativelanguage.example.com/v1/generate",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "prompt": "Write a polite meeting agenda for a student project."
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:34:32+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:35:09+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=alex.demo@example.com, api_key=sk-test_FAKEKEY_9f3a21c8d4e5b607, aadhaar=7777-2222-1111"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:35:46+00:00",
+    "url": "https://weather.example.com/v1/forecast",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "city": "Hyderabad"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:36:23+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=priya.test@example.org, api_key=sk-test_FAKEKEY_9f3a21c8d4e5b607, aadhaar=9999-1111-2222"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:37:00+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/run",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "tool": "shell",
+      "command": "rm -rf /tmp/demo-workspace",
+      "reason": "cleanup after fictional agent task"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:37:37+00:00",
+    "url": "https://profile.example.com/settings",
+    "method": "PUT",
+    "category": "normal_web",
+    "payload": {
+      "theme": "dark"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:38:14+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:38:51+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/files",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "action": "read",
+      "path": "/app/.env",
+      "note": "attempt to load local secrets file"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:39:28+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=qa.bot@example.net, api_key=ak_test_NOTREAL_88bbccdd1122eeff, aadhaar=9999-1111-2222"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:40:05+00:00",
+    "url": "https://www.example.com/home",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "path": "/home",
+      "user_agent": "Mozilla/5.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:40:42+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=alex.demo@example.com, api_key=gsk_test_dummy_44aa55bb66cc77dd, aadhaar=8888-0000-3333"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:41:19+00:00",
+    "url": "https://profile.example.com/settings",
+    "method": "PUT",
+    "category": "normal_web",
+    "payload": {
+      "theme": "dark"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:41:56+00:00",
+    "url": "https://profile.example.com/settings",
+    "method": "PUT",
+    "category": "normal_web",
+    "payload": {
+      "theme": "dark"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:42:33+00:00",
+    "url": "https://api.anthropic.example.com/v1/messages",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "claude-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Explain HTTP status codes."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:43:10+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/files",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "action": "read",
+      "path": "/app/.env",
+      "note": "attempt to load local secrets file"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:43:47+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=priya.test@example.org, api_key=gsk_test_dummy_44aa55bb66cc77dd, aadhaar=7777-2222-1111"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:44:24+00:00",
+    "url": "https://copilot.internal.example.com/tools/exec",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "command": "cat .env && rm -rf ./backup",
+      "cwd": "/srv/demo-app"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:45:01+00:00",
+    "url": "https://generativelanguage.example.com/v1/generate",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "prompt": "Write a polite meeting agenda for a student project."
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:45:38+00:00",
+    "url": "https://api.anthropic.example.com/v1/messages",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "claude-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Explain HTTP status codes."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:46:15+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/run",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "tool": "shell",
+      "command": "rm -rf /tmp/demo-workspace",
+      "reason": "cleanup after fictional agent task"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:46:52+00:00",
+    "url": "https://www.example.com/home",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "path": "/home",
+      "user_agent": "Mozilla/5.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:47:29+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/files",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "action": "read",
+      "path": "/app/.env",
+      "note": "attempt to load local secrets file"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:48:06+00:00",
+    "url": "https://www.example.com/home",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "path": "/home",
+      "user_agent": "Mozilla/5.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:48:43+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=qa.bot@example.net, api_key=ak_test_NOTREAL_88bbccdd1122eeff, aadhaar=8888-0000-3333"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:49:20+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=priya.test@example.org, api_key=ak_test_NOTREAL_88bbccdd1122eeff, aadhaar=8888-0000-3333"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:49:57+00:00",
+    "url": "https://shop.example.com/api/cart",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "item_id": "SKU-1001",
+      "qty": 1
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:50:34+00:00",
+    "url": "https://www.example.com/home",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "path": "/home",
+      "user_agent": "Mozilla/5.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:51:11+00:00",
+    "url": "https://generativelanguage.example.com/v1/generate",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "prompt": "Write a polite meeting agenda for a student project."
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:51:48+00:00",
+    "url": "https://generativelanguage.example.com/v1/generate",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "prompt": "Write a polite meeting agenda for a student project."
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:52:25+00:00",
+    "url": "https://copilot.internal.example.com/tools/exec",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "command": "cat .env && rm -rf ./backup",
+      "cwd": "/srv/demo-app"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:53:02+00:00",
+    "url": "https://www.example.com/home",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "path": "/home",
+      "user_agent": "Mozilla/5.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:53:39+00:00",
+    "url": "https://shop.example.com/api/cart",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "item_id": "SKU-1001",
+      "qty": 1
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:54:16+00:00",
+    "url": "https://agent.shadow-it.example.com/v1/run",
+    "method": "POST",
+    "category": "risky_agent",
+    "payload": {
+      "tool": "shell",
+      "command": "rm -rf /tmp/demo-workspace",
+      "reason": "cleanup after fictional agent task"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:54:53+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:55:30+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:56:07+00:00",
+    "url": "https://news.example.org/tech",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "section": "tech"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:56:44+00:00",
+    "url": "https://www.example.com/home",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "path": "/home",
+      "user_agent": "Mozilla/5.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:57:21+00:00",
+    "url": "https://www.example.com/home",
+    "method": "GET",
+    "category": "normal_web",
+    "payload": {
+      "path": "/home",
+      "user_agent": "Mozilla/5.0"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:57:58+00:00",
+    "url": "https://weather.example.com/v1/forecast",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "city": "Hyderabad"
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:58:35+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:59:12+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize this public README."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-31T00:59:49+00:00",
+    "url": "https://shop.example.com/api/cart",
+    "method": "POST",
+    "category": "normal_web",
+    "payload": {
+      "item_id": "SKU-1001",
+      "qty": 1
+    }
+  },
+  {
+    "timestamp": "2026-10-31T01:00:26+00:00",
+    "url": "https://generativelanguage.example.com/v1/generate",
+    "method": "POST",
+    "category": "clean_ai",
+    "payload": {
+      "prompt": "Write a polite meeting agenda for a student project."
+    }
+  },
+  {
+    "timestamp": "2026-10-31T01:01:03+00:00",
+    "url": "https://api.openai.example.com/v1/chat/completions",
+    "method": "POST",
+    "category": "sensitive_ai",
+    "payload": {
+      "model": "gpt-test",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Store this fictional test record: email=alex.demo@example.com, api_key=sk-test_FAKEKEY_9f3a21c8d4e5b607, aadhaar=7777-2222-1111"
+        }
+      ]
+    }
+  }
+]
