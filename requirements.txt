@@ -1,0 +1,6 @@
+streamlit
+pandas
+plotly
+psutil
+openai
+pytest
