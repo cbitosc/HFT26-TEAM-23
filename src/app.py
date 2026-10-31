@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 import plotly.graph_objects as go
+import psutil
 import streamlit as st
 
 SRC_DIR = Path(__file__).resolve().parent
@@ -18,6 +19,7 @@ if str(SRC_DIR) not in sys.path:
 
 from analyzer import analyze_file, analyze_records
 from database import DEFAULT_DB, fetch_analyses
+from live_scan import scan_live_connections
 from parser import SAMPLE_PATH, parse_csv_text, parse_json_logs
 
 PRODUCT_NAME = "AI Shadow IT & Agentic Data Exfiltration Scanner"
@@ -681,6 +683,49 @@ def render_upload() -> None:
         render_activity_table(analyzed)
 
 
+def render_live_scan() -> None:
+    st.markdown("### Live process scan")
+    st.caption(
+        "Read-only snapshot of established network connections. This scans the machine "
+        "hosting the dashboard, which may differ from the computer running your browser."
+    )
+    if not st.button("Scan my laptop now", key="live_scan_button"):
+        return
+
+    try:
+        result = scan_live_connections()
+    except (psutil.Error, OSError) as exc:
+        st.error(f"Could not complete the live scan: {exc}")
+        return
+
+    if result.connections:
+        st.dataframe(
+            [
+                {
+                    "Process / app": item.process_name,
+                    "PID": item.pid,
+                    "Remote endpoint": item.remote_endpoint,
+                    "Provider": item.provider,
+                    "Recognized endpoint": item.recognized_endpoint,
+                }
+                for item in result.connections
+            ],
+            width="stretch",
+            hide_index=True,
+        )
+    else:
+        st.info("No matching active AI-provider connections were detected in this snapshot.")
+
+    for warning in result.warnings:
+        st.warning(warning)
+    st.caption(
+        "Matching uses current established TCP socket metadata, resolved provider endpoint "
+        "addresses, and Ollama's default port. It does not inspect payloads or show past "
+        "activity. Shared IPs, VPNs, proxies, DNS changes, permissions, and custom provider "
+        "endpoints can prevent attribution; no match does not prove that an app is unused."
+    )
+
+
 def main() -> None:
     st.set_page_config(
         page_title=PRODUCT_NAME,
@@ -710,6 +755,7 @@ def main() -> None:
 
     render_header("Overview", monitoring, source)
     render_metrics(metrics)
+    render_live_scan()
     if rows:
         render_charts(rows)
     render_activity_table(rows)
