@@ -20,12 +20,19 @@ HOST_PROVIDERS = {
     "api.anthropic.com": "anthropic",
     "huggingface.co": "huggingface",
     "api.featherless.ai": "featherless",
+    "generativelanguage.googleapis.com": "gemini",
 }
 
 PATH_PROVIDERS = {
     "/v1/chat/completions": "openai",
     "/v1/messages": "anthropic",
     "/api/generate": "ollama",
+}
+
+PROVIDER_ALIASES = {
+    "chatgpt": "openai",
+    "claude": "anthropic",
+    "google gemini": "gemini",
 }
 
 OLLAMA_PORT = 11434
@@ -73,9 +80,10 @@ def detect_ai(record: dict[str, Any]) -> dict[str, Any]:
     except (TypeError, ValueError):
         port_num = None
 
-    provider = None
+    explicit_provider = str(record.get("provider") or "").strip().lower()
+    provider = PROVIDER_ALIASES.get(explicit_provider, explicit_provider or None)
     if port_num == OLLAMA_PORT:
-        provider = "ollama"
+        provider = provider or "ollama"
     if provider is None:
         provider = _provider_from_host(host)
     if provider is None:

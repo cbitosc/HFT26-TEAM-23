@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parent.parent
 SAMPLE_PATH = ROOT / "data" / "sample_traffic.json"
 
-STANDARD_FIELDS = ("time", "app", "host", "port", "path", "payload")
+STANDARD_FIELDS = ("time", "app", "provider", "host", "port", "path", "payload")
 
 
 def _as_text(value: Any) -> str:
@@ -36,7 +36,7 @@ def _default_port(scheme: str, port: Any) -> int | None:
 
 def _infer_app(host: str, extra: dict[str, Any] | None = None) -> str:
     extra = extra or {}
-    explicit = _as_text(extra.get("app"))
+    explicit = _as_text(extra.get("app") or extra.get("application"))
     if explicit:
         return explicit
 
@@ -79,12 +79,23 @@ def normalize_record(raw: Any) -> dict[str, Any] | None:
     if not isinstance(raw, dict):
         return None
 
+    nested_request = raw.get("request")
+    if isinstance(nested_request, dict):
+        raw = {**raw, **nested_request}
+
     url = _as_text(raw.get("url") or raw.get("request_url"))
     host = _as_text(raw.get("host") or raw.get("hostname"))
     path = _as_text(raw.get("path"))
     port = raw.get("port")
     scheme = ""
-    time_value = raw.get("time") or raw.get("timestamp") or raw.get("startedDateTime") or ""
+    time_value = (
+        raw.get("time")
+        or raw.get("timestamp")
+        or raw.get("startedDateTime")
+        or raw.get("event_time")
+        or raw.get("created_at")
+        or ""
+    )
 
     if url:
         try:
@@ -102,11 +113,20 @@ def normalize_record(raw: Any) -> dict[str, Any] | None:
 
     payload = raw.get("payload")
     if payload is None:
-        payload = raw.get("postData") or raw.get("body") or raw.get("content") or {}
+        payload = (
+            raw.get("postData")
+            or raw.get("request_body")
+            or raw.get("body")
+            or raw.get("content")
+            or raw.get("prompt")
+            or raw.get("message")
+            or {}
+        )
 
     return {
         "time": _as_text(time_value),
         "app": _infer_app(host, raw),
+        "provider": _as_text(raw.get("provider") or raw.get("ai_provider")) or None,
         "host": host,
         "port": _default_port(scheme, port),
         "path": path or "/",
@@ -141,7 +161,7 @@ def parse_json_logs(data: Any) -> list[dict[str, Any]]:
     if isinstance(data, list):
         rows = data
     elif isinstance(data, dict):
-        rows = data.get("logs") or data.get("records") or [data]
+        rows = data.get("events") or data.get("logs") or data.get("records") or [data]
     else:
         return []
 
